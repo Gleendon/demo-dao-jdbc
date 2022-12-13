@@ -15,8 +15,9 @@ public class Program {
 //		
 //		Seller seller = new Seller(20, "Valleria", "Valleria@gmail", new Date(), 5000.0, dp);
 //		
-		
+		//criando a conexão
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
 		Seller seller = sellerDao.findById(3);
 		
 		System.out.println(seller);
