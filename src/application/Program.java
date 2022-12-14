@@ -38,8 +38,21 @@ public class Program {
 		
 		System.out.println("\n Teste Inserindo vendedor");
 		Seller newSeller = new Seller(null, "Valleria", "valleria@gmail.com", new Date(), 4000.0, dep);
-		sellerDao.insert(newSeller);
+		//sellerDao.insert(newSeller);
 		System.out.println("Selle inserted ID " + newSeller.getId());
+		
+		
+		System.out.println("\n Teste update vendedor");
+		Seller upSeller = sellerDao.findById(1);
+		upSeller.setName("Novo nome");
+		sellerDao.update(upSeller);
+		System.out.println("Updade completed");
+		
+		System.out.println("\n Deletar um vendedor");
+		int id = 10;
+		sellerDao.deleteById(id);
+		System.out.println("Delete Completed");
+		
 	}
 
 }
